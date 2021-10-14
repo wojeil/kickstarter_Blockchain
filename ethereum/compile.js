@@ -21,3 +21,11 @@ const source = fs.readFileSync(campaignPath, 'utf8');
 
 //Compile both contracts with solidity compiler 
 
+const output = solc.compile(source, 1).contracts;
+
+// Create build folder and write output to the build directory 
+
+fs.ensureDirSync(buildPath);
+
+//loop over output to place both contracts in seperate files inside the build folder 
+
