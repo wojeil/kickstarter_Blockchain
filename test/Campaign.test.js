@@ -66,6 +66,21 @@ it('allows people to contribute money and marks them as approvers', async()=>{
 });
 
 
+it('Minimum amount contribution is required', async()=>{
+
+    try {
+        await campaign.methods.contribute().send({
+            value: '5',
+            from: accounts[1]
+        });
+        assert(false);
+    } catch(err) {
+        assert(err);
+    }
+
+});
+
+
 
 
 });
