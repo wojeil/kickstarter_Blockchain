@@ -43,4 +43,12 @@ assert.ok(factory.options.address);
 assert.ok(campaign.options.address);
 
 });
+
+
+//This test will confirm that the person creating the campaign is the manager 
+it('marks caller as the campaign manager', async () =>{
+    const manager = await campaign.methods.manager().call();
+
+    assert.equal(accounts[0], manager)
+});
 });
