@@ -7,7 +7,7 @@ const fs = require('fs-extra');
 //logic to delete the build folder 
 const buildPath = path.resolve(__dirname, 'build');
 //removeSync comes from fs extra 
-// fs.removeSync(buildPath);
+fs.removeSync(buildPath);
 
 
 //Read the Campaign.sol from the contract folder 
@@ -29,8 +29,11 @@ fs.ensureDirSync(buildPath);
 
 //loop over output to place both contracts in seperate files inside the build folder 
 
+
+// console.log(output);
+
 for (let contract in output) {
     fs.outputJsonSync(
-        path.resolve(buildPath, contract + '.json'),output[contract]
+        path.resolve(buildPath, contract.replace(':', '') + '.json'),output[contract]
     );
 }
