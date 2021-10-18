@@ -103,6 +103,21 @@ await campaign.methods.contribute().send({
     value: web3.utils.toWei('10', 'ether')
 });
 
+await campaign.methods.createRequest('A', web3.utils.toWei('5', 'ether'), accounts[1])
+.send({
+    from: accounts[0],
+    gas: '1000000'
+});
+
+await  campaign.methods.approveRequest(0).send({
+    from: accounts[0],
+    gas: '1000000'
+});
+
+await campaign.methods.finalizeRequest(0).send({
+    from: accounts[0],
+    gas: '1000000'
+});
 
 
 });
