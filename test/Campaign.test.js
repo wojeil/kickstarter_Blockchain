@@ -129,7 +129,8 @@ balance = web3.utils.fromWei(balance, 'ether');
 //parseFloat takes a string and turns into a decimal number
 balance = parseFloat(balance);
 
-
+console.log(balance);
+assert(balance > 104)
 });
 
 });
