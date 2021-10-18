@@ -119,6 +119,16 @@ await campaign.methods.finalizeRequest(0).send({
     gas: '1000000'
 });
 
+//retrieve the balance of account[1] and confirm there is additional balance of Eth inside of it 
+
+let balance = await web3.eth.getBalance(accounts[1]);
+
+balance = web3.utils.fromWei(balance, 'ether');
+
+
+//parseFloat takes a string and turns into a decimal number
+balance = parseFloat(balance);
+
 
 });
 
