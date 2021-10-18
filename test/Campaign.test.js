@@ -94,4 +94,17 @@ it('Allows a manager to make a payment request',async()=>{
 });
 
 
+//test to confirm requests are processed
+
+it('processes requests', async () =>{
+
+await campaign.methods.contribute().send({
+    from: accounts[0],
+    value: web3.utils.toWei('10', 'ether')
+});
+
+
+
+});
+
 });
