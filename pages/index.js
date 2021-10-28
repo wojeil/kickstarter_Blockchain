@@ -4,15 +4,19 @@ import factory from '../ethereum/factory';
 
 
 class CampaignIndex extends Component {
-   async componentDidMount() {
-       //retrieve and array of addresses of all campaigns 
+//to leverage Next Js
+    static async getInitialProps(){
+
+     //retrieve and array of addresses of all campaigns 
     const campaigns = await factory.methods.getDeployedCampaigns().call();
 
-    console.log(campaigns);
-    }
+    return {campaigns};
+
+}
+
 
     render(){
-        return <div>Campaigns Index !</div>
+        return <div>{this.props.campaigns[0]}</div>;
     }
 
 }
