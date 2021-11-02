@@ -1,7 +1,6 @@
-import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
-import React from 'react';
-
-export default ()=> {
+import React from "react";
+ 
+const Layout = (props) => {
     return (
         <div>
             <h1>
@@ -14,3 +13,4 @@ export default ()=> {
         </div>
     )
 };
+export default Layout;

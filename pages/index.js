@@ -31,7 +31,7 @@ class CampaignIndex extends Component {
       
         return(
         
-    
+    <Layout>
         <div>
                <link
           rel="stylesheet"
@@ -48,7 +48,7 @@ class CampaignIndex extends Component {
                 primary 
             />
         </div>
-        
+    </Layout>
         );
     }
 
