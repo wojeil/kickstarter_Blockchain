@@ -4,7 +4,7 @@ import {Menu} from 'semantic-ui-react';
 
 const Header = (props) => {
     return (
-        <Menu>
+        <Menu style={{marginTop: '15px'}}>
             <Menu.Item> 
                 WadzCoin
             </Menu.Item>
