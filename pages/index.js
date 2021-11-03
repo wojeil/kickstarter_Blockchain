@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 
 
 
+
 class CampaignIndex extends Component {
 //to leverage Next Js
     static async getInitialProps(){
@@ -32,6 +33,8 @@ class CampaignIndex extends Component {
         return(
         
     <Layout>
+
+        
         <div>
                <link
           rel="stylesheet"
