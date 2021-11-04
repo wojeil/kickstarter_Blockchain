@@ -7,8 +7,10 @@ class CampaignNew extends  Component {
     render(){
         return(
 
-            <Layout/>
-            <h1>  New Campaign </h1>
+            <Layout>
+                <h1>New Campain</h1>
+            </Layout>
+         
 
         );
     }
