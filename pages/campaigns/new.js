@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Form, Button, Input } from 'semantic-ui-react';
 import Layout from "../../components/Layout";
+import factory from "../../ethereum/factory";
 
 
 
@@ -9,15 +10,24 @@ class CampaignNew extends  Component {
 
     state ={
         minimumContribution: ''
-
     };
+//new method
+    onSubmit = async (event) => {
+        event.preventDefault();
+            await  factory.methods
+            .createCampaign(this.state.minimumContribution)
+            .send({
+                from
+            });
+    };
+
     render(){
         return(
 
             <Layout>
                <h3> Create a campaign </h3>
 
-                <Form>
+                <Form  onSubmit={this.onSubmit}>
                     <Form.Field>
                         <label> Minimum Contribution</label>
                         <Input label="wei" labelPosition="right"
