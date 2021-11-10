@@ -5,6 +5,12 @@ import Layout from "../../components/Layout";
 
 
 class CampaignNew extends  Component {
+    //event handlers
+
+    state ={
+        minimumContribution: ''
+
+    };
     render(){
         return(
 
@@ -14,7 +20,9 @@ class CampaignNew extends  Component {
                 <Form>
                     <Form.Field>
                         <label> Minimum Contribution</label>
-                        <Input label="wei" labelPosition="right" />
+                        <Input label="wei" labelPosition="right"
+                        value={this.state.minimumContribution}
+                        onChange={event => this.setState({minimumContribution: event.target.value})} />
                     </Form.Field>
 
                     <Button primary> Create </Button>
