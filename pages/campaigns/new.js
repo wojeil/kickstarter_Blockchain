@@ -9,17 +9,28 @@ class CampaignNew extends  Component {
     //event handlers
 
     state ={
-        minimumContribution: ''
+        minimumContribution: '',
+        errorMessage: ''
     };
 //new method
     onSubmit = async (event) => {
         event.preventDefault();
+
+
+
+        //inserting try catch err handling for better UX 
+
+        try {
             const accounts = await web3.eth.getAccounts();
             await  factory.methods
             .createCampaign(this.state.minimumContribution)
             .send({
                 from: accounts[0]
             });
+        } catch (err) {
+            this.setState({errorMessage: err.message});
+        }
+           
     };
 
     render(){
