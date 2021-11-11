@@ -10,7 +10,8 @@ class CampaignNew extends  Component {
 
     state ={
         minimumContribution: '',
-        errorMessage: ''
+        errorMessage: '',
+        loading: false
     };
 //new method
     onSubmit = async (event) => {
@@ -18,8 +19,8 @@ class CampaignNew extends  Component {
 
 
 
-        //inserting try catch err handling for better UX 
-
+        //inserting try catch err handling for better UX .. loading prop as well
+        this.setState({loading:true, errorMessage: ''});
         try {
             const accounts = await web3.eth.getAccounts();
             await  factory.methods
@@ -28,9 +29,10 @@ class CampaignNew extends  Component {
                 from: accounts[0]
             });
         } catch (err) {
-            this.setState({errorMessage: err.message});
+            this.setState({errorMessage:err.message});
         }
-           
+        //turn of loading 
+        this.setState({loading:false});
     };
 
     render(){
@@ -47,7 +49,7 @@ class CampaignNew extends  Component {
                         onChange={event => this.setState({minimumContribution: event.target.value})} />
                     </Form.Field>
                     <Message error header = "Oh No.." content = {this.state.errorMessage} />
-                    <Button primary> Create </Button>
+                    <Button loading={this.state.loading} primary> Create </Button>
 
                 </Form>
             </Layout>
