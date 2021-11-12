@@ -12,12 +12,16 @@ const Header = (props) => {
                 </a>
             </Link>
             <Menu.Menu position="right">
-            <Menu.Item> 
-                Campaigns
-            </Menu.Item>
-            <Menu.Item> 
-                +
-            </Menu.Item>
+            <Link route="/">
+                <a className="item">
+                   Campaigns
+                </a>
+            </Link>
+            <Link route="/campaigns/new">
+                <a className="item">
+                    +
+                </a>
+            </Link>
             </Menu.Menu>
 
         </Menu>
