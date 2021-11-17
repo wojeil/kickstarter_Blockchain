@@ -4,7 +4,8 @@ import Layout from '../../components/Layout';
 class CampaignShow extends Component {
 
     static async getInitialProps(props){
-        props.query.address;
+        console.log(props.query.address);
+        return {};
     }
     render() {
         return (
