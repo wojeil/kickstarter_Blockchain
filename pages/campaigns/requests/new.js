@@ -9,6 +9,13 @@ import Layout from '../../../components/Layout';
 
 class RequestNew extends Component{
 
+    
+    state ={
+        value:'',
+        description: '',
+        recipient:''
+    }
+
     static async getInitialProps(props){
         const {address}=props.query;
 
