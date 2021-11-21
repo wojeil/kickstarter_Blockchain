@@ -7,7 +7,11 @@ routes.add('/campaigns/new', '/campaigns/new')
 .add('/campaigns/:address', '/campaigns/show')
 
 //method to add a new route towards the list of requests page 
-.add('/campaigns/:address/requests', '/campaigns/requests/index');
+.add('/campaigns/:address/requests', '/campaigns/requests/index')
+
+//adding Route for the new js for requests
+
+.add('campaigns/:address/requests/new', 'campaigns/requests/new');
 
 module.exports = routes;
 
