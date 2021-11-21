@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Input, Message } from 'semantic-ui-react';
+import { Button, Form, Input, Message } from 'semantic-ui-react';
 
 
 class ContributeForm extends Component {
@@ -10,9 +10,13 @@ class ContributeForm extends Component {
                 <Form.Field>
                     <label> Amount to Contribute </label>
                     <Input
-                        
+                        label="ether"
+                        labelPosition="right"
                     />
                 </Form.Field>
+                <Button primary>
+                    Contribute
+                </Button>
             </Form>
         );
 
