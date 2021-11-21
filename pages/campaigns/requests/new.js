@@ -33,21 +33,30 @@ class RequestNew extends Component{
                     <label>
                         Description
                     </label>
-                    <Input/>
+                    <Input 
+                        value={this.state.description}
+                        onChange={event => this.setState({description: event.target.value})}
+                    />
                 </Form.Field>
 
                 <Form.Field>
                     <label>
                         Value in Ether
                     </label>
-                    <Input/>
+                    <Input
+                        value={this.state.value}
+                        onChange={event => this.setState({value: event.target.value})}
+                    />
                 </Form.Field>
 
                 <Form.Field>
                     <label>
                         Recipient
                     </label>
-                    <Input/>
+                    <Input
+                         value={this.state.recipient}
+                         onChange={event => this.setState({recipient: event.target.value})}
+                    />
                 </Form.Field>
 
             </Form>
