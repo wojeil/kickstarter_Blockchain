@@ -25,6 +25,7 @@ class CampaignShow extends Component {
             balance,
             manager,
             minimumContribution,
+            requestsCount,
             approversCount
         } =this.props;
         
