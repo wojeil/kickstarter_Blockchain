@@ -19,6 +19,26 @@ class CampaignShow extends Component {
             
         };
     }
+
+    renderCards(){
+        const{
+            balance,
+            manager,
+            minimumContribution,
+            approversCount
+        } =this.props;
+        
+        const items = [
+            {
+                header:
+                meta:
+                description:
+            }
+        ]
+    }
+
+
+
     render() {
         return (
        <Layout>
