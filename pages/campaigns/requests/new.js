@@ -40,6 +40,8 @@ class RequestNew extends Component{
                 recipient)
                 .send({from:accounts[0]});
 
+                Router.pushRoute(`/campaigns/${this.props.address}/requests`);
+
         }catch (err){
             this.setState({errorMessage: err.message});
         }
