@@ -23,6 +23,18 @@ class RequestNew extends Component{
         return {address};
     }
 
+    onSubmit = async event =>{
+        event.preventDefault();
+        const campaign =Campaign(this.props.address);
+        const{description, value, recipient } = this.state;
+        
+        try{
+
+        }catch (err){
+
+        }
+    }
+
     render(){
 
         return(
