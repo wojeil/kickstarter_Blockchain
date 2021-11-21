@@ -26,8 +26,8 @@ class RequestNew extends Component{
     render(){
 
         return(
-            <Layout>
-                <h3>Create Request</h3>
+            
+                
             <Form>
                 <Form.Field>
                     <label>
@@ -63,7 +63,7 @@ class RequestNew extends Component{
 
             </Form>
 
-            </Layout>
+        
             
            
         );
