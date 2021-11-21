@@ -27,7 +27,7 @@ class RequestNew extends Component{
 
         return(
             <Layout>
-                <h3>Create Request</h3>
+                <h3>Create a Request</h3>
             <Form>
                 <Form.Field>
                     <label>
