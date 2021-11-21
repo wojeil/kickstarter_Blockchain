@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, Input, Message } from 'semantic-ui-react';
+import Campaign from '../ethereum/campaign';
+
 
 
 class ContributeForm extends Component {
@@ -10,7 +12,7 @@ class ContributeForm extends Component {
 
     onSubmit=(event) =>{
         event.preventDefault();
-        
+       const campaign= Campaign(this.props.address);
 
     };
 
