@@ -6,6 +6,8 @@ routes.add('/campaigns/new', '/campaigns/new')
 //method to add dynamic routing first argument describes rout and second will be the component I tap into
 routes.add('/campaigns/:address', '/campaigns/show');
 
+
+
 module.exports = routes;
 
 
