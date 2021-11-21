@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Card } from 'semantic-ui-react';
 import Layout from '../../components/Layout';
 import Campaign from '../../ethereum/campaign';
 
@@ -31,11 +32,13 @@ class CampaignShow extends Component {
         
         const items = [
             {
-                header:
-                meta:
-                description:
+                header: manager,
+                meta: 'Address of Manager',
+                description: 'The manager created this campaign and can create requests to get money'
             }
-        ]
+        ];
+
+        return <Card.Group items={items} />;
     }
 
 
@@ -44,6 +47,7 @@ class CampaignShow extends Component {
         return (
        <Layout>
              <h3>Campaign Show</h3>
+             {this.renderCards()}
        </Layout>     
       
         );
