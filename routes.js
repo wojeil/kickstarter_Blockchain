@@ -4,9 +4,10 @@ const routes = require('next-routes')();
 
 routes.add('/campaigns/new', '/campaigns/new')
 //method to add dynamic routing first argument describes rout and second will be the component I tap into
-routes.add('/campaigns/:address', '/campaigns/show');
+.add('/campaigns/:address', '/campaigns/show')
 
-
+//method to add a new route towards the list of requests page 
+.add('/campaigns/:address/requests', '/campaigns/requests/index');
 
 module.exports = routes;
 
