@@ -59,6 +59,8 @@ class RequestNew extends Component{
                     />
                 </Form.Field>
 
+                <Button primary> Create </Button>
+
             </Form>
 
             </Layout>
