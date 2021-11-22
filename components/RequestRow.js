@@ -12,7 +12,7 @@ class RequestRow extends Component{
         return(
             <Row>
                 <Cell>{this.props.id}</Cell>
-                <Cell></Cell>
+                <Cell>{this.props.request.description}</Cell>
                 <Cell></Cell>
                 <Cell></Cell>
                 <Cell></Cell>
