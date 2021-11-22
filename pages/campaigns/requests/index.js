@@ -26,7 +26,7 @@ class RequestIndex extends Component {
         return {address, requests, requestCount};
     }
 
-    RenderRow(){
+    RenderRows(){
         return this.props.requests.map((request, index) => {
 
             return <RequestRow
@@ -65,7 +65,7 @@ class RequestIndex extends Component {
                         </Row>
                     </Header>
                     <Body>
-                        {this.RenderRow()}
+                        {this.RenderRows()}
                     </Body>
                 </Table>     
             </Layout>
