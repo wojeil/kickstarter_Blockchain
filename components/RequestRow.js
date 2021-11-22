@@ -40,7 +40,9 @@ class RequestRow extends Component{
                 <Cell>{request.recipient}</Cell>
                 <Cell>{request.approvalCount}/{approversCount}</Cell>
                 <Cell>
+                    {request.complete ? null : (
                     <Button color="green" basic onClick={this.onApprove}>Approve</Button>
+                    )}
                 </Cell>
                 <Cell>
                 <Button color="teal" basic onClick={this.onFinalize}>Finalize</Button>
