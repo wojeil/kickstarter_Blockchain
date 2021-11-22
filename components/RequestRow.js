@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Table} from 'semantic-ui-react';
+import web3 from '../ethereum/web3';
 
 
 
@@ -8,13 +9,14 @@ class RequestRow extends Component{
     render(){
 
         const{ Row, Cell }= Table;
+        const{id, request} = this.props;
 
         return(
             <Row>
-                <Cell>{this.props.id}</Cell>
-                <Cell>{this.props.request.description}</Cell>
-                <Cell></Cell>
-                <Cell></Cell>
+                <Cell>{id}</Cell>
+                <Cell>{request.description}</Cell>
+                <Cell>{web3.utils.fromWei(request.value, 'ehter')}</Cell>
+                <Cell>{request.recipient}</Cell>
                 <Cell></Cell>
                 <Cell></Cell>
                 <Cell></Cell>
