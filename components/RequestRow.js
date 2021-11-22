@@ -1,10 +1,21 @@
 import React, {Component} from 'react';
 import {Table, Button} from 'semantic-ui-react';
 import web3 from '../ethereum/web3';
+import Campaign from '../ethereum/campaign';
 
 
 
 class RequestRow extends Component{
+
+    onApprove = async() =>{
+        const campaign =Campaign(this.props.address);
+        const accounts= await web3.eth.getAccounts();
+
+        await campaign.methods.approveRequest(this.props.id).send({
+            from: accounts[0]
+        });
+
+    };
 
     render(){
 
@@ -19,7 +30,7 @@ class RequestRow extends Component{
                 <Cell>{request.recipient}</Cell>
                 <Cell>{request.approvalCount}/{approversCount}</Cell>
                 <Cell>
-                    <Button color="green" basic>Approve</Button>
+                    <Button color="green" basic onClick={this.onApprove}>Approve</Button>
                 </Cell>
                 <Cell></Cell>
             </Row>
