@@ -20,7 +20,7 @@ class RequestIndex extends Component {
             })
         );
 
-        console.log(requests);
+        console.log(request);
 
         return {address};
     }
