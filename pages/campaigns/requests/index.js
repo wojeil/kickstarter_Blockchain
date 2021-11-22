@@ -14,15 +14,15 @@ class RequestIndex extends Component {
         const campaign =Campaign(address);
         const requestCount = await campaign.methods.getRequestsCount().call();
 
-        const request = await Promise.all(
+        const requests = await Promise.all(
             Array(requestCount).fill().map((element, index) =>{
                 return campaign.methods.requests(index).call()
             })
         );
 
-        console.log(request);
+        console.log(requests);
 
-        return {address};
+        return {address, requests};
     }
 
     render(){
